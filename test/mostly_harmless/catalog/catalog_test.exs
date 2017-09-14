@@ -1,7 +1,14 @@
 defmodule MostlyHarmless.CatalogTest do
-  use ExUnit.Case
-  alias MostlyHarmless.Catalog
+  use MostlyHarmless.DataCase
+
+  alias MostlyHarmless.{Catalog, Repo}
   alias MostlyHarmless.Catalog.Product
+
+  setup do
+    Repo.insert %Product{name: "Tea", price: 100, sku: "A137", is_seasonal: true, category: "consumables"}
+    Repo.insert %Product{name: "Portal Gun", price: 5000, sku: "C137", is_seasonal: false, category: "gadgets"}
+    :ok
+  end
 
   test "list_products/0 returns all products" do
     [p1, p2] = Catalog.list_products

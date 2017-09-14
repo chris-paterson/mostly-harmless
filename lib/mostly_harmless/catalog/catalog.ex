@@ -1,10 +1,10 @@
 defmodule MostlyHarmless.Catalog do
   alias MostlyHarmless.Catalog.Product
+  alias MostlyHarmless.Repo
 
   def list_products do
-    p1 = %Product{name: "Tea", price: 100, is_seasonal: true, category: "consumables"}
-    p2 = %Product{name: "Portal Gun", price: 5000, is_seasonal: false, category: "gadgets"}
-    [p1, p2]
+    Product
+    |> Repo.all
   end
 
   def list_seasonal_products do

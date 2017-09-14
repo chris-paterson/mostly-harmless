@@ -1,8 +1,20 @@
 defmodule MostlyHarmlessWeb.Acceptance.HomepageTest do
-  use ExUnit.Case
+  use MostlyHarmless.DataCase
   use Hound.Helpers
 
   hound_session()
+
+  setup do
+    # GIVEN
+    # There are two products, Tea and Portal Gun priced 100 and 5000
+    # categorized under `consumables` and `gadgets` respectively.
+    alias MostlyHarmless.Repo
+    alias MostlyHarmless.Catalog.Product
+
+    Repo.insert %Product{name: "Tea", price: 100, sku: "A137", is_seasonal: true, category: "consumables"}
+    Repo.insert %Product{name: "Portal Gun", price: 5000, sku: "C137", is_seasonal: false, category: "gadgets"}
+    :ok
+  end
 
   test "presence of featured products" do
     # GIVEN
