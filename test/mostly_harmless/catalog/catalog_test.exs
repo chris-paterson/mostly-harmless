@@ -21,4 +21,10 @@ defmodule MostlyHarmless.CatalogTest do
 
     assert product.name == "Tea"
   end
+
+  test "get_category_products/1 returns products of the given category" do
+    [product = %Product{}] = Catalog.get_category_products("consumables")
+
+    assert product.name == "Tea"
+  end
 end
