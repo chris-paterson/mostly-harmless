@@ -1,4 +1,4 @@
-defmodule MostlyHarmlessWeb.HomepageTest do
+defmodule MostlyHarmlessWeb.Acceptance.HomepageTest do
   use ExUnit.Case
   use Hound.Helpers
 
