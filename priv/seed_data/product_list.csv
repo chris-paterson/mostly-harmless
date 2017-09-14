@@ -1,0 +1,13 @@
+id,name,price,sku,is_seasonal,image,quantity,category
+1,Tea,100,200,true,/product_images/tea.jpeg,100 pc,consumables
+2,Portal Gun,5000,4,false,/product_images/portal_gun.jpeg,1 pc,gadgets
+3,Pan Galactic Gargle Blaster,300,100,false,/product_images/pan_galactic_gargle_blaster.jpeg,1 pc,consumables
+4,Door,1000,42,false,/product_images/door.jpeg,1 pc,gadgets
+5,Nutrimatic Drinks Dispenser,3000,5,true,/product_images/nutrimatic_drinks_dispenser.jpeg,1 pc,gadgets
+6,Infinite Improbability Drive,999999,1,true,/product_images/infinite_improbability_drive.jpeg,1 pc,gadgets
+7,Digital Watch,1000,5000,true,/product_images/digital_watch.jpeg,1 pc,gadgets
+8,Towel,800,10000,false,/product_images/towel.jpeg,1 pc,gadgets
+9,Insidious Wine,500,80,true,/product_images/insidious_wine.jpeg,1 pc,consumables
+10,Champagne,800,180,false,/product_images/champagne.jpeg,1 pc,consumables
+11,Ameglion Major Cow Steak,500,3000,false,/product_images/ameglion_major_cow_steak.jpeg,2 pc,consumables
+12,Ameglion Major Cow Rump,400,4000,false,/product_images/ameglion_major_cow_rump.jpeg,2 pc,consumables
