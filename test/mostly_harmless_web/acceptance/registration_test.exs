@@ -17,8 +17,8 @@ defmodule MostlyHarmlessWeb.Acceptance.RegistrationTest do
     find_within_element(form, :name, "registration[phone]")
     |> fill_field("123456789")
 
-    find_within_element(form, :name, "registration[residence_area]")
-    |> fill_field("Earth")
+    find_element(:css, "#registration_residence_planet option[value='Earth']")
+    |> click
 
     find_within_element(form, :name, "registration[password]")
     |> fill_field("hunter2")
