@@ -30,4 +30,32 @@ defmodule MostlyHarmless.CRMTest do
     invalid_attrs = %{}
     assert {:error, %Ecto.Changeset{}} = CRM.create_customer(invalid_attrs)
   end
+
+  test "get_customer_by_email" do
+    valid_attrs = %{
+      "name" => "Arthur",
+      "email" => "Arthur@earth.com",
+      "password" => "hunter2",
+      "residence_planet" => "Earth",
+      "phone" => "123456789"
+    }
+
+    {:ok, customer1} = CRM.create_customer(valid_attrs)
+    customer2 = CRM.get_customer_by_email("arthur@earth.com")
+    assert customer1.id == customer2.id
+  end
+
+  test "get_customer_by_credentials" do
+    valid_attrs = %{
+      "name" => "Arthur",
+      "email" => "Arthur@earth.com",
+      "password" => "hunter2",
+      "residence_planet" => "Earth",
+      "phone" => "123456789"
+    }
+
+    {:ok, customer1} = CRM.create_customer(valid_attrs)
+    customer2 = CRM.get_customer_by_credentials(valid_attrs)
+    assert customer1.id == customer2.id
+  end
 end
