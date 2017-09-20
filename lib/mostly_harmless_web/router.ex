@@ -23,6 +23,7 @@ defmodule MostlyHarmlessWeb.Router do
     post "/register", RegistrationController, :create
     get "/login", SessionController, :new
     post "/login", SessionController, :create
+    get "/logout", SessionController, :delete # GET so it does not make a form.
   end
 
   # Other scopes may use custom stacks.
