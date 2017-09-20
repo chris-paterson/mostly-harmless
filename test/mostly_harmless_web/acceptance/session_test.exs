@@ -23,7 +23,7 @@ defmodule MostlyHarmlessWeb.Acceptance.SessionTest do
 
     form = find_element(:id, "session-form")
     find_within_element(form, :name, "session[email]")
-    |> fill_field("arthus@earth.com")
+    |> fill_field("arthur@earth.com")
 
     find_within_element(form, :name, "session[password]")
     |> fill_field("hunter2")
